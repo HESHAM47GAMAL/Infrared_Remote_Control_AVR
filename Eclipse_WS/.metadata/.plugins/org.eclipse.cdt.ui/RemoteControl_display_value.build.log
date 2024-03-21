@@ -1,0 +1,20 @@
+11:12:42 **** Incremental Build of configuration Debug for project RemoteControl_display_value ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 RemoteControl_display_value.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   15690 bytes (95.8% Full)
+(.text + .data + .bootloader)
+
+Data:        107 bytes (10.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+11:12:42 Build Finished. 0 errors, 0 warnings. (took 246ms)
+

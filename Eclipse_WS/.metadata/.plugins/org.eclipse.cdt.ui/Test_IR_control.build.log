@@ -1,0 +1,20 @@
+11:51:57 **** Incremental Build of configuration Debug for project Test_IR_control ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Test_IR_control.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   15994 bytes (97.6% Full)
+(.text + .data + .bootloader)
+
+Data:         87 bytes (8.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+11:51:57 Build Finished. 0 errors, 0 warnings. (took 161ms)
+

@@ -1,0 +1,31 @@
+ /******************************************************************************
+ *
+ * Module: Infrared Remote Control
+ *
+ * File Name: IR_interface.h
+ *
+ * Description:  Header that contain function prototype
+ *
+ * Author: Hesham Shehata
+ *
+ *******************************************************************************/
+
+
+#ifndef IR_INTERFACE_H_
+#define IR_INTERFACE_H_
+
+/**************************                   INCLUDES                   **************************/
+#include "../../SERVICE/STD_TYPES.h"
+
+
+void IR_Remote_Init(void);
+
+
+
+
+uint64 IR_Remote_Receive(uint8 * ProtocalType);
+
+// void IR_Remote_Send()
+
+
+#endif

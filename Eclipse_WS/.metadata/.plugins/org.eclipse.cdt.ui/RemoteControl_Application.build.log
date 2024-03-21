@@ -1,0 +1,49 @@
+11:51:56 **** Incremental Build of configuration Debug for project RemoteControl_Application ****
+make all 
+Building file: ../HAL/IR_Remote_Control/IR_program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"HAL/IR_Remote_Control/IR_program.d" -MT"HAL/IR_Remote_Control/IR_program.o" -c -o "HAL/IR_Remote_Control/IR_program.o" "../HAL/IR_Remote_Control/IR_program.c"
+Finished building: ../HAL/IR_Remote_Control/IR_program.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c:26:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+In file included from ../main.c:27:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'main':
+../main.c:37: warning: passing argument 2 of 'IR_Remote_Receive' discards qualifiers from pointer target type
+Finished building: ../main.c
+ 
+Building target: RemoteControl_Application.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,RemoteControl_Application.map -mmcu=atmega16 -o "RemoteControl_Application.elf"  ./SERVICE/STRING_SERVICE_FUN.o  ./MCAL/TIMER1/TIMER1_config.o ./MCAL/TIMER1/TIMER1_program.o  ./MCAL/GPIO/GPIO_program.o  ./HAL/LCD/LCD_program.o  ./HAL/IR_Remote_Control/IR_program.o  ./main.o   
+Finished building target: RemoteControl_Application.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S RemoteControl_Application.elf  >"RemoteControl_Application.lss"
+Finished building: RemoteControl_Application.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex RemoteControl_Application.elf  "RemoteControl_Application.hex"
+Finished building: RemoteControl_Application.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 RemoteControl_Application.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   19370 bytes (118.2% Full)
+(.text + .data + .bootloader)
+
+Data:        107 bytes (10.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+11:51:57 Build Finished. 0 errors, 3 warnings. (took 743ms)
+
